@@ -1,0 +1,42 @@
+<!-- Accept sentence replace each vowel by next consecutive character -->
+
+<body>
+    <label for ="sk">Enter The String</label>
+    <input type="text" id="sk">
+    <button id="demo" onclick="vow()">Submit</button>
+    <p id="out"></p>
+    
+    <script>
+        var word="";
+        function vow()
+        {
+            var a=document.getElementById("sk").value;
+            var s=a.split("");
+
+            for(ch in s)
+            {
+                if(s[ch]=='a'||s[ch]=='e'||s[ch]=='i'||s[ch]=='o'||s[ch]=='u'||s[ch]=='A'||s[ch]=='E'||s[ch]=='I'||s[ch]=='O'||s[ch]=='U')
+                {
+                    //var r=+String.fromCharCode(s[ch]-(-1))
+                    var r=s[ch];
+                    var rr=String.fromCharCode(r.charCodeAt(0)-(-1))
+
+                   
+                       word=word+rr;
+                }
+                else
+                {
+                    word=word+s[ch];
+                }
+            }
+            document.write(word);
+        }
+
+    
+
+
+
+
+</script>
+    </body>
+    </html>

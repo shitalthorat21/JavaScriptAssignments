@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsondemo</title>
+</head>
+<body>
+
+	<form>
+		<table>
+			
+			<tr>
+				<th> UserName: </th>
+				<td> <input type="text" name="ucode" id="t1">
+			</tr>
+			<tr>
+				<th> Password: </th>
+				<td> <input type="Password" name="upass" id="t2">
+			</tr>
+			<tr>
+				<th></th>
+				<td> <input type="submit" onclick="add()">
+			</tr>
+		</table>
+
+	</form>
+<script type="text/javascript">
+	function add() {
+var unm=document.getElementById('t1').value;
+var upass=document.getElementById('t2').value;
+
+
+var check =JSON.parse(localStorage.getItem("objlist"));
+if(check==null){
+	arr=[];
+}
+
+
+var eobj= new obj(unm,upass);
+arr.push(eobj);
+
+localStorage.setItem("objlist",JSON.stringify(arr));
+
+
+	}
+function obj(unm,upass){
+this.unm=unm;
+this.upass=upass;
+}
+
+
+
+
+</script>
+</body>
+</html>

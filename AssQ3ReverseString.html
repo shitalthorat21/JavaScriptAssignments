@@ -1,0 +1,29 @@
+<!-- 3.	Write the js code to print the string in the reverse format -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    <label for ="sk">Enter The String</label>
+    <input type="text" id="sk">
+    <button id="demo" onclick="sub()">Submit</button>
+    <p id="out"></p>
+    <script>
+        function sub()
+        {
+           
+        var a=document.getElementById("sk").value;
+        var s=a.split("");
+        var str="";
+        for(let i=0;i<s.length;i++)
+        {
+         str=s[i]+str;
+        }
+        document.getElementById("out").innerHTML=str;
+        }
+    </script>
+    </body>
+    </html>

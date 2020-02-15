@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    
+        <label for="sk">Enter The String</label>
+       <input type='text' id="sk">
+       <button id="c" onclick="sub()">Submit </button>
+       <script>
+           function sub()
+           {
+               var s="";
+               var a=document.getElementById("sk").value;
+               for(i=0;i<a.length;i++)
+               {
+                   if(a[i]%2==0&&a[i+1]%2==0)
+                   {
+                       s=s+a[i]+"*";
+                   }
+                   else{
+                       s=s+""+a[i];
+                   }
+               }
+               document.write(s);
+           }
+       </script>
+        </body>
+        <html>
+    

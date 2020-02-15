@@ -1,0 +1,29 @@
+<!--8.	Write a JavaScript program to determine whether a given year is a leap year 
+-->
+
+<!doctype html>
+<html>
+    <body>
+        <label for="year">Enter Year</label>
+        <input type="number" id="sk" placeholder="year">
+        <button id="c" onclick="chk()">Check </button>
+        <h3 id="out"></h3>
+
+
+        <script>
+           function chk()
+           {
+               if(document.getElementById("sk").value%4===0)
+               {
+                document.getElementById("out").innerHTML="The Provided year is a leap year";
+               }
+               else
+               {
+                document.getElementById("out").innerHTML="The Provided year is not a leap year";
+               }
+           } 
+           
+
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,25 @@
+
+h1{
+    color:brown;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#one{
+    background-image: url("q.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.k{
+    margin-left: 90px;
+    font-size: 30px;
+    font-family: cursive;
+    background-color:peachpuff;
+    color:green;
+}
+#new{
+    background-image:url("wedding-cake-17.jpg"); background-attachment: fixed;
+background-size: cover;
+}
+#aaa{
+    position: sticky;
+    top:5;
+}

@@ -1,0 +1,25 @@
+<!-- Accept email_id from user and check valid or not(should contain @,.) -->
+<body>
+    
+<label for ="sk">Enter The Email</label>
+    <input type="text" id="sk">
+    <button id="demo" onclick="email()">Submit</button>
+    <p id="out"></p>
+    <script>
+
+      function email()
+        {
+     var a=document.getElementById("sk").value;
+     if(a.includes("@"))
+     {
+     document.getElementById('out').innerHTML="Valid";
+        }
+        else
+        {
+            document.getElementById('out').innerHTML="InValid";
+        }}
+        
+
+</script>
+    </body>
+    </html>

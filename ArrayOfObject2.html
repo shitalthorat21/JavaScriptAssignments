@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    <body>
+        <script>
+            function Subject(id,nm,subtopic)
+                {
+                    this.id=id;
+                    this.nm=nm;
+                    this.subtopic=subtopic;
+                }
+            
+            function Subtopic(topic_id,topic_name)
+                {
+                    this.topic_id=topic_id;
+                    this.topic_name=topic_name;
+                    
+                }
+            
+            var t1=new Subtopic(101,'java');
+            var t2=new Subtopic(102,'Angular');
+
+            // var t=[];
+            // t.push(t1);
+            // t.push(t2);
+
+            var s1=new Subject(10,'pratik',t1)
+            var s2=new Subject(20,'shital',t2)
+            var s3=new Subject(30,'aditya',t1)
+            var arr=[];
+            arr.push(s1);
+            arr.push(s2);
+            arr.push(s3);
+
+
+
+        
+
+        for(var i=0;i<arr.length;i++)
+
+        {
+            document.write(arr[i].id+" "+arr[i].nm+" "+arr[i].subtopic.topic_id+"  "+arr[i].subtopic.topic_name+"<br>");
+            // for(var j=0;j<arr[i].subtopic.length;j++)
+            // {
+            //     document.write(arr[i].subtopic[j].topic_id+" "+arr[i].subtopic[j].topic_name+"<br>");
+            // }
+            
+        }
+        
+        
+
+        
+    </script>
+        </body>
+        <html>
+    

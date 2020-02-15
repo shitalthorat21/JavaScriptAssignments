@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    <body>
+        <script>
+
+        var team_one=[{nm:'pratik',age:25},{nm:'aditya',age:25} ];
+
+        var team_two=[{nm:'shital',age:30}];
+
+        train_list=[];
+        trainer_one={nm:'Deepa',t:team_one}
+        trainer_two={nm:'Kalyani',t:team_two}
+        train_list.push(trainer_one);
+        train_list.push(trainer_two);
+
+        for(var i=0;i<train_list.length;i++)
+        {
+            document.write(train_list[i].nm+"<br>");
+                for(var j=0;j<train_list[i].t.length;j++)
+                {
+                    document.write(train_list[i].t[j].nm+" "+train_list[i].t[j].age+"<br>");
+                }
+        }
+    </script>
+        </body>
+        <html>
+    

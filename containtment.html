@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+function emp(id,name){
+	this.name= name ;
+	this.id=id;
+}
+function manager(id,name,team){
+	this.id=id;
+	this.name=name;
+	this.team=team;
+}
+ var e1 = new emp(1,"sonia");
+ var e2= new emp(2,"ram");
+ var e3 = new emp(3,"viraj");
+ var e4 = new emp(4,"rani");
+
+var team1=[];
+var team2=[];
+team1.push(e1);
+team1.push(e2);
+
+team2.push(e3);
+team2.push(e4);
+
+var m1= new manager(101,"pranav",team1);
+var m2= new manager(102,"medha",team2);
+
+var mana=[];
+mana.push(m1);
+mana.push(m2);
+
+
+for(var i =0;i<mana.length;i++){
+	document.write(mana[i].name);
+	for(var j = 0;j<mana[i].team.length;j++){
+		document.write(mana[i].team[j].id+" "+mana[i].team[j].name+"<br>")
+	}
+}
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

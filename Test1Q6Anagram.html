@@ -1,0 +1,32 @@
+<!-- Write a js program to check whether two strings are anagram or not?-->
+    
+    
+    <body>
+    <script>
+var str1="JAVA";
+var str2="VAJA";
+var a=str1.toLowerCase();
+var b=str2.toLowerCase();
+
+
+var s=a.split("").sort().join();
+
+document.write(s);
+
+document.write("<br>");
+var s1=b.split("").sort().join();
+document.write(s1);
+document.write("<br>");
+if (s===s1)
+{
+    document.write("String is anagram");
+}
+else{
+    document.write("String is not anagram");
+}
+
+
+
+</script>
+    </body>
+    </html>

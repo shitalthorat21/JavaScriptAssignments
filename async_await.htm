@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+// rest parameter 
+
+// function fn (a,...rest){
+// document.write(rest);
+// }
+// fn(10,20,30);
+
+
+// async and await
+
+
+async function show(){
+console.log("inside the function");
+
+const response= await fetch ('https://api.github.com/users');
+console.log("after fetch");
+const users = await response.json();
+console.log("users resolved");
+return users;
+	
+}
+
+
+console.log("before calling function");
+
+var a = show();
+console.log("after calling function");
+a.then(data=>console.log(data));
+console.log(a);
+console.log("last line of code");
+
+</script>
+</body>
+</html>

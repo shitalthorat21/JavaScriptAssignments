@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>passvalidation</title>
+</head>
+<body>
+	<form onsubmit="return check()">
+		enter password:
+<input type="password" value="" id="passwords">
+<span id='errormsg'style="color: red"></span>
+<br><br>
+confirm password :
+<input type="password" value="" id="confirmpassword">
+<span id='errormsg1' style="color: red"></span>
+<br>
+<input type="submit" name="" value="submit">
+</form>
+
+<script type="text/javascript">
+	function check(){
+var p1=document.getElementById('passwords').value;
+var p2=document.getElementById('confirmpassword').value;
+
+
+if(p1==""){
+	document.getElementById('errormsg').innerHTML="please fill password";
+	return false;	
+}
+else if(p1.length<5){
+	document.getElementById('errormsg').innerHTML="weak password";
+	return false;	
+}
+else if(p1.length>20){
+	document.getElementById('errormsg').innerHTML="password should contain min 20 characters";
+	return false;	
+}
+else if(p1!=p2){
+
+	document.getElementById('errormsg').innerHTML="password dosen't match";
+	return false;
+}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>digital clock</title>
+</head>
+<body>
+<p id="show"></p>
+
+<script type="text/javascript">
+	
+	// var clock= setInterval(clocktime,1000);
+
+setInterval(clocktime,1000);
+
+function clocktime() {
+var d = new Date();
+// alert(d);
+var t=d.toLocaleTimeString();
+document.getElementById('show').innerHTML=t;
+}
+
+
+function logout(){
+	window.back();
+}
+
+
+// var s="2+3/4"
+// document.write(eval(s));
+
+// clocktime();
+</script>
+</body>
+</html>

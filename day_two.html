@@ -1,0 +1,24 @@
+<html>
+<body>
+<script>
+function fn(a,b,c){
+document.write(arguments[0]);
+document.write(arguments[3]);
+console.log(arguments)
+// document.write(arguments.toString());
+}
+fn('rahul',18,"male");
+
+document.write("<hr>");
+
+function mul(a,b,...args){
+document.write(a);
+document.write(b+"<br>");
+document.write(args);
+console.log(args)
+console.log(args.sort());
+}
+mul(2,3,4,5,6,7,8,11,1);
+ </script>
+    </body>
+</html>

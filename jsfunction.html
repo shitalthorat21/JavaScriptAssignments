@@ -1,0 +1,24 @@
+<html>
+    <body>
+
+        <script>
+            
+           function fun(nm,age,gender)
+           {
+               document.write(arguments[0]);
+               document.write(arguments[1]);
+               document.write(arguments[2]);
+               document.write(arguments[3]);
+           }
+           fun("shital",30,"Female");
+
+           function mult(a,b,...args)
+           {
+            document.write(a);
+            document.write(b);
+            document.write(args);
+           }
+           mult(1,2,3,4,5,6)
+
+        </script>
+    </body>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>calculator</title>
+    <style>
+        #bor{
+            border-style:groove;
+            border-radius: 10px;
+            background-color: black;
+            height: 350px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <H1 style="border: solid 1px; border-radius: 5px; margin-top: 20px;" class="container"> <center>calculator</center></H1>
+    <div class="container" >
+        <center>
+        <div id="bor" style=" padding: 1cm;">
+            <input type="text" name="display" class="col-md-12" id="cc" ><br><br>           
+        <div class="row">
+            <div class="col-md-3" >
+                <button class="form-control btn btn-light"  onclick="number(1)"> 1 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light"  onclick="number(2)"> 2 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light"  onclick="number(3)"> 3 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-danger" onclick="cut()"> clear </button>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-3" >
+                <button class="form-control btn btn-light"  onclick="number(4)"> 4 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light"  onclick="number(5)"> 5 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light"  onclick="number(6)"> 6 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-info" onclick="number('+')"> + </button>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-3" >
+                <button class="form-control btn btn-light"  onclick="number(7)" > 7 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light" onclick="number(8)"> 8 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light" onclick="number(9)"> 9 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-info" onclick="number('-')"> - </button>
+            </div>
+            
+        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-3" >
+                <button class="form-control btn btn-success" onclick=ans()> = </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-light" onclick="number(0)"> 0 </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-info"onclick="number('/')"> / </button>
+            </div>
+            
+            <div class="col-md-3">
+                <button class="form-control btn btn-info" onclick="number('*')"> * </button>
+            </div>
+            
+        </div>
+        </div>
+    </center>
+    </div>
+
+    <script>
+        function number(x)
+        {
+            document.getElementById("cc").value+=x;            
+        }
+        function ans()
+        {
+            let x=document.getElementById("cc").value;
+            let y=eval(x);
+            document.getElementById("cc").value=y;
+        }
+        function cut()
+        {
+            document.getElementById("cc").value="";            
+        }
+    </script>
+
+</body>
+</html>

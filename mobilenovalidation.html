@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mobilenovalidation</title>
+</head>
+<body>
+	<form onsubmit=" return nocheck()">
+		enter no
+<input type="text" id="mno" name="">
+<span id="errormsg" style="color: red"> </span><br> 
+<input type="submit" name="" value="Submit">  
+</form>
+<script type="text/javascript">
+	function nocheck(){
+var n =document.getElementById('mno').value;
+
+if(n==""){
+	document.getElementById('errormsg').innerHTML="enter your mobile no";
+	return false;
+	}
+	else if(isNaN(n)){
+	document.getElementById('errormsg').innerHTML="enter only numeric value";
+	return false;
+	}
+	else if(n.length<10 ){
+	document.getElementById('errormsg').innerHTML="enter 10 digit no";
+	return false;
+	}
+	else if(n.length>10 ){
+	document.getElementById('errormsg').innerHTML="enter 10 digit no";
+	return false;
+	}
+	else if((n.charAt(0)!=7 ) && (n.charAt(0)!=7 ) && (n.charAt(0)!=7 )){
+	document.getElementById('errormsg').innerHTML="enter NO which start with 7 8 9 ";
+	return false;
+	}
+}
+
+</script>
+</body>
+</html>
+
+<!-- if(n.length<10 || n.length>10){
+	document.getElementById('errormsg').innerHTML="enter 10 digit no";
+	return false;
+	}
+	else if(n.charAt(0)!=7 && n.charAt(0)!=8 && n.charAt(0)!=9){
+			document.getElementById('errormsg').innerHTML="0th position";
+	return false;
+} -->

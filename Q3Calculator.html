@@ -1,0 +1,60 @@
+<!--3.	Write a program to create a calculator
+-->
+<!DOCTYPE html>
+<head>
+    <style>
+        #cc{
+            height: 300px;
+            width: 450px;
+            border: black groove 2px;
+            border-radius: 10px;
+            border-color: black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        
+        <div id="cc">
+            <h1><center>Calculator</center></h1>
+            <br>
+    <label form="Number" style="padding-left: 10px;">First Number</label>
+    <input type="Number" id="sk" placeholder="FirstNumber">
+    <br><br>
+    <label form="Number"style="padding-left: 10px;"> Second Number</label>
+    <input type="Number" id="sa" placeholder="SecondNumber">
+<br>
+<br>
+<div style="padding:10px">
+    <button id="a" onclick="add()" style="background-color: grey;" >Add</button>
+    <button id="s" onclick="sub()" style="background-color: grey;">Substract</button>
+    <button id="m" onclick="mult()" style="background-color: grey;">Multiply</button>
+    <button id="d" onclick="div()" style="background-color: grey;">Divide</button>
+<br>
+<br>
+
+    <label form="Number">Answer</label>
+    <h4 id="out" style="border:black groove 1px ; border-radius: 5px; width: 60px; height: 20px; background-color:white;"></h4>
+    </div>
+    </div>
+    <script>
+        function add()
+        {
+            document.getElementById("out").innerHTML=Number(document.getElementById("sk").value) +Number (document.getElementById("sa").value);
+        }
+        function sub()
+        {
+            document.getElementById("out").innerHTML=document.getElementById("sk").value-document.getElementById("sa").value;
+        }
+        function mult()
+        {
+            document.getElementById("out").innerHTML=document.getElementById("sk").value*document.getElementById("sa").value;
+        }
+        function div()
+        {
+            document.getElementById("out").innerHTML=document.getElementById("sk").value/document.getElementById("sa").value;
+        }
+    </script>
+    </body>
+</html>

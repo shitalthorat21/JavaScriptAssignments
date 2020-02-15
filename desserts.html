@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position:absolute;
+          background-color:greenyellow;
+          min-width: 120px;
+          padding: 20px 50px;
+          z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display:block;
+        }
+        </style>
+</head>
+
+
+    
+    <div class="dropdown">
+      <span style="font-size:xx-large;color:white;">Mouse over me</span>
+      <div class="dropdown-content">
+        <p><h3>CupCakes</h3></p>
+        <p><h3>Pestry</h3></p>
+        <p><h3>MavaCakes</h3></p>
+      </div>
+    </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>emailvalidation</title>
+</head>
+<body>
+<form onsubmit="return emailcheck()">
+	enter email id:
+	<input type="text" name="uemail" value="" id="emails">
+	<span id="errormsg" style="color: red"></span>
+	<br>
+	<input type="submit" name="" value="submit">
+</form>
+<script type="text/javascript">
+	function emailcheck()
+{
+var email=document.getElementById('emails').value;
+
+if(email.indexOf('@')<=0){
+	document.getElementById('errormsg').innerHTML="enter valid email";
+	return false ;
+}
+else if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+document.getElementById('errormsg').innerHTML="invalid position of . ";
+	return false ;
+}
+
+
+
+}
+</script>
+</body>
+</html>

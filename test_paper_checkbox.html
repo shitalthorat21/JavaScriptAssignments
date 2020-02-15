@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkbox</title>
+</head>
+<body>
+	enter the name:
+<input type="text" id="uname">
+
+<input type="checkbox" class="val" value="java">java
+
+<input type="checkbox" class="val" value="sql">SQL
+
+<input type="checkbox" class="val" value="ang">angular
+<input type="button" onclick="add()">
+<script type="text/javascript">
+	function add(){
+   var nm=document.getElementById('uname').value;
+   var sub =document.getElementsByClassName('val');
+
+   for(i=0;i<sub.length;i++){
+
+   	
+   	console.log(sub[i].value);
+   }
+	}
+
+</script>
+</body>
+</html>

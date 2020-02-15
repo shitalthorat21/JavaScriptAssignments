@@ -1,0 +1,49 @@
+<!--9.Write a JavaScript program to calculate multiplication and division of two numbers
+-->
+
+<!doctype html>
+<head>
+    <style>
+        #cc{
+            height: 300px;
+            width: 450px;
+            border: black groove 1px;
+            
+        }
+    </style>
+</head>
+<html>
+    <body style="text-align: left; margin-top: 30px;  ">
+        <div id="cc">
+            <br>
+    <label form="Number" style="padding-left: 10px;">First Number</label>
+    <input type="Number" id="sk" placeholder="FirstNumber">
+
+<br><br>
+    <label form="Number"style="padding-left: 10px;"> Second Number</label>
+    <input type="Number" id="sa" placeholder="SecondNumber">
+<br>
+<br>
+    <div style="padding:10px" >
+        <button id="m" onclick="mult()">Multiply</button>
+        <button  id="d" onclick="div()">Divide</button>
+    </div>
+    <h3 id="tp">The Result is:</h3>
+    <h3 id="out"></h3>
+</div>
+<script>
+    function mult()
+    {
+        // document.getElementById("tp").innerHTML="Product of"
+     document.getElementById("out").innerHTML=document.getElementById("sk").value*document.getElementById("sa").value;  
+    }
+    function div()
+    {
+        document.getElementById("out").innerHTML=document.getElementById("sk").value/document.getElementById("sa").value;  
+    }
+</script>
+
+    </body>
+
+
+</html>

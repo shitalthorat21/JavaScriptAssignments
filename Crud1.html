@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css">
+
+	
+</head>
+
+<body>
+<h1><center>Crud Page</center></h1>
+<div class="container">
+<div class="row">
+<div class="col-md-10">
+<input type="text" id="ad" class ="form-control">
+</div>
+<div class="col-md-2">
+<button class="btn btn-primary" onclick="add1()" >AddUser</button>
+</div>
+</div>
+<br>
+<p id="out" class="user"></p>
+
+<script>
+    var count=0
+function add1()
+{
+    var a=document.getElementById("ad").value;
+
+    var ak='<div class="container">'+
+    '<div class="row">'+
+    '<div class="col-md-6">'+
+    '<input type="text" class ="form-control" disabled value="'+a+'">'+
+    '<button id="del_'+count+'" class="btn btn-danger col-md-2" onclick="del(this.id)">Delete</button>'+   
+    '<button id="edi_'+count+'" class="btn btn-success col-md-2" onclick="edi(this.id)">Edit</button>'+    
+    '<button id="upd_'+count+'" class="btn btn-warning col-md-2" onclick="upd(this.id)">Update</button>'+'</div>'+'</div>'
+    if(a!="" && !(a>=0||a<=9)){
+    document.getElementById("out").insertAdjacentHTML('beforeend',ak);
+    count++;
+    document.getElementById("ad").value="";
+    arr=JSON.parse(localStorage.getItem("user"));
+    if (arr==null)
+    {
+        arr=[];
+    }
+    arr.push(a);
+    localStorage.setItem("user",JSON.stringify(arr));
+
+    }
+    else{
+        alert("must be name");
+    }
+}
+
+
+
+function del(did)
+{
+var d=document.getElementById(did).parentNode.parentNode;
+d.remove();
+}
+
+function edi(eid)
+{
+var e=document.getElementById(eid).parentNode.parentNode;
+var ed=e.firstChild.firstChild;
+ed.removeAttribute('disabled');
+}
+    function upd(uid)
+    {
+        var u=document.getElementById(uid).parentNode.parentNode;
+        var up=u.firstChild.firstChild;
+        up.setAttribute("disabled",'disabled');
+    }
+</script>
+
+
+</body>

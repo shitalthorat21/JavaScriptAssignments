@@ -1,0 +1,29 @@
+<!-- WAP to find longest word in the given sentence -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    <script>
+var s="I am Java Programmer SQL";
+// var s1=[];
+s1=s.split(" ");
+console.log(s1);
+var max=0;
+var b="";
+var c=s1.reduce((a,b)=>{
+    if(a.length>b.length){
+        max=a.length;
+        return a;
+    }
+else 
+return b;
+});
+
+document.write(c);
+</script>
+    </body>
+    </html>
