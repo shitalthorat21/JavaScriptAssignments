@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #cc{
+            height: 300px;
+            width: 450px;
+            border: black groove 2px;
+            border-radius: 10px;
+            border-color: black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+    <div id="cc">
+        <h1><center>Calculator</center></h1>
+        <br>
+        <form name='myForm'>
+Number1:
+<input type="Number" id="num1">
+<br><br>
+Number2:
+<input type="Number" id="num2">
+<br>
+<br>
+<select id='operator'>
+    <option value="+">Add</option>
+    <option value="-">Substract</option>
+    <option value="/">Divide</option>
+    <option value="*">Multiply</option>
+    </select>
+    <br>
+    <br>
+    <input type='button' value="Submit" onclick="sub()"/>
+    <input type='reset'></input>
+<br>
+<br>
+    Result:
+    <input type='text' id='result'/>    
+</form>
+</div>
+</center>    
+    
+    <script>
+        function sub(){
+            var n1=parseInt(document.getElementById("num1").value);
+            var n2=parseInt(document.getElementById("num2").value);
+            var oper=document.getElementById('operator').value;
+
+            if(isNaN(n1)||isNaN(n2))
+            {
+                alert("Enter valid number");
+            }
+            
+
+            if(oper==='+')
+            {
+                document.getElementById("result").value=n1+n2;
+            }
+            else if (oper==='-')
+            {
+                document.getElementById("result").value=n1-n2;
+            }
+            else if (oper==='/')
+            {
+                if(n2=='0')
+                {
+                    alert("Unable to divide");
+                    
+                }
+                else
+                {
+                    document.getElementById("result").value=n1/n2;
+                }
+                
+            }
+            else if (oper==='*')
+            {
+                document.getElementById("result").value=n1*n2;
+            }
+
+        }
+    </script>
+    </body>
+    </html>
